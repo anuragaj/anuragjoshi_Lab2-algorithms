@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+
+// I am not able to figure out what the issue is when I want to another transaction in the loop.
+// After first transaction I get an error at line 15.
+
 public class PayMoney {
 
 	public static void main(String[] args) {
@@ -27,21 +31,21 @@ public class PayMoney {
 	}
 
 	public static void ProcessNewTransaction() {
-		Scanner s = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of transaction array");
-		var sizeOfTransactionArray = s.nextInt();
+		var sizeOfTransactionArray = sc.nextInt();
 		Integer[] transactionArray = new Integer[sizeOfTransactionArray];
 		
 		System.out.println("Enter the values of array");
 		for(int i =0;i < sizeOfTransactionArray; i++) {
-			transactionArray[i] = s.nextInt();
+			transactionArray[i] = sc.nextInt();
 		}
 				
 		System.out.println("Enter the total no of targets that needs to be achieved");
-		var numberOfTragetsNeedsToBeAchived = s.nextInt();
+		var numberOfTragetsNeedsToBeAchived = sc.nextInt();
 		
 		System.out.println("Enter the value of target");
-		var target = s.nextInt();
+		var target = sc.nextInt();
 		
 		int currentTotal = 0;
 		var targetAchived = false;
@@ -56,7 +60,7 @@ public class PayMoney {
 		if(!targetAchived) {
 			System.out.println("Given target is not achieved");
 		}
-		s.close();
+		sc.close();
 	}
 
 }
