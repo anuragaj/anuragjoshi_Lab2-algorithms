@@ -8,7 +8,6 @@ public class PayMoney {
 		while (status) {
 			System.out.println("Enter N for new transaction");
 			System.out.println("Enter Q to quit");
-			while(!s.hasNextLine());
 			var input = s.nextLine();
 			switch (input) {
 			case "N":
