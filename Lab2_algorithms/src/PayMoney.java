@@ -12,7 +12,7 @@ public class PayMoney {
 		while (status) {
 			System.out.println("Enter N for new transaction");
 			System.out.println("Enter Q to quit");
-			var input = s.nextLine();
+			var	input = s.nextLine();
 			switch (input) {
 			case "N":
 			case "n":
